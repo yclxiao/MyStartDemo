@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MeViewController.h
 //  MyIosStart
 //
 //  Created by yclxiao on 2017/8/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MeViewController : UIViewController
 
 @end
-
