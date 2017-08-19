@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MeViewController.h"
+#import "MainViewController.h"
+#import "ExploreViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,70 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIImage *defaultImg = nil;
+    UIImage *selectedImg = nil;
+    
+    
+    //main
+    MainViewController *mainController = [[MainViewController alloc] init];
+    mainController.title = @"main";
+//    defaultImg = [UIImage imageNamed:@"baomu"];
+//    selectedImg = [UIImage imageNamed:@"bingrenpeihu"];
+    
+    //以这种模式显示图片 UIImageRenderingModeAlwaysOriginal
+    defaultImg = [[UIImage imageNamed:@"baomu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    selectedImg = [[UIImage imageNamed:@"bingrenpeihu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    mainController.tabBarItem = [[UITabBarItem alloc] initWithTitle:mainController.title image:defaultImg selectedImage:selectedImg];
+    
+    UINavigationController *mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainController];
+    
+    
+    //explore
+    ExploreViewController *exploreController = [[ExploreViewController alloc] init];
+    exploreController.title = @"explore";
+    defaultImg = [UIImage imageNamed:@"bingxiangchaixi"];
+    selectedImg = [UIImage imageNamed:@"boliqingjie"];
+    exploreController.tabBarItem = [[UITabBarItem alloc] initWithTitle:exploreController.title image:defaultImg selectedImage:selectedImg];
+    UINavigationController *exploreNavigationController = [[UINavigationController alloc] initWithRootViewController:exploreController];
+    
+    
+    //me
+    MeViewController *meController = [[MeViewController alloc] init];
+    meController.title = @"me";
+    defaultImg = [UIImage imageNamed:@"buyichuman"];
+    selectedImg = [UIImage imageNamed:@"chufangshenceng"];
+    meController.tabBarItem = [[UITabBarItem alloc] initWithTitle:meController.title image:defaultImg selectedImage:selectedImg];
+    UINavigationController *meNavigationController = [[UINavigationController alloc] initWithRootViewController:meController];
+    
+    
+    
+    //tabbar
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[mainNavigationController,exploreNavigationController,meNavigationController];
+    
+    
+    
+//    UIView* backView = [[UIView alloc]initWithFrame:CGRectMake(0,0,300,49)];
+//    
+//    backView.backgroundColor = [UIColor redColor];
+//    
+//    [tabBarController.tabBar insertSubview:backView atIndex:0];
+//    
+//    tabBarController.tabBar.opaque=YES;
+    
+    
+//    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"chufangshenceng"]];
+//    [[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

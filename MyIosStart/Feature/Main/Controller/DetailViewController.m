@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Use full screen layout.
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Title.
+    self.title = @"Detail";
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "DetailViewController.h"
 
 @interface MainViewController ()
 
@@ -16,7 +17,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    label.text = @"hello world";
+    
+    
+    [self.view addSubview:label];
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"detail" style:UIBarButtonItemStylePlain target:self action:@selector(toDetailController)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)toDetailController{
+    DetailViewController *detailController = [[DetailViewController alloc] init];
+    detailController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:detailController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
