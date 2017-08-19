@@ -24,6 +24,8 @@
 		FCA36E4C1F4677B1007188D1 /* buyichuman.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36E461F4677B1007188D1 /* buyichuman.png */; };
 		FCA36E4D1F4677B1007188D1 /* chufangshenceng.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36E471F4677B1007188D1 /* chufangshenceng.png */; };
 		FCA36E501F46B3D4007188D1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA36E4F1F46B3D4007188D1 /* DetailViewController.m */; };
+		FCA36E631F4831D1007188D1 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA36E611F4831D1007188D1 /* MyCell.m */; };
+		FCA36E641F4831D1007188D1 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA36E621F4831D1007188D1 /* MyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		FCA36E471F4677B1007188D1 /* chufangshenceng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chufangshenceng.png; sourceTree = "<group>"; };
 		FCA36E4E1F46B3D4007188D1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FCA36E4F1F46B3D4007188D1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FCA36E601F4831D1007188D1 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		FCA36E611F4831D1007188D1 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		FCA36E621F4831D1007188D1 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +222,9 @@
 			children = (
 				FCA36E301F45BBB3007188D1 /* ExploreViewController.h */,
 				FCA36E311F45BBB3007188D1 /* ExploreViewController.m */,
+				FCA36E601F4831D1007188D1 /* MyCell.h */,
+				FCA36E611F4831D1007188D1 /* MyCell.m */,
+				FCA36E621F4831D1007188D1 /* MyCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,6 +443,7 @@
 				FCA36E4C1F4677B1007188D1 /* buyichuman.png in Resources */,
 				FCA36E4D1F4677B1007188D1 /* chufangshenceng.png in Resources */,
 				FCA36E4B1F4677B1007188D1 /* boliqingjie.png in Resources */,
+				FCA36E641F4831D1007188D1 /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +474,7 @@
 				FCA36DEA1F45B7E7007188D1 /* main.m in Sources */,
 				FCA36E351F45BBCA007188D1 /* MeViewController.m in Sources */,
 				FCA36E501F46B3D4007188D1 /* DetailViewController.m in Sources */,
+				FCA36E631F4831D1007188D1 /* MyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +712,7 @@
 				FCA36E141F45B7E7007188D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCA36E151F45B7E7007188D1 /* Build configuration list for PBXNativeTarget "MyIosStartTests" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +721,7 @@
 				FCA36E171F45B7E7007188D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCA36E181F45B7E7007188D1 /* Build configuration list for PBXNativeTarget "MyIosStartUITests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +730,7 @@
 				FCA36E1A1F45B7E7007188D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

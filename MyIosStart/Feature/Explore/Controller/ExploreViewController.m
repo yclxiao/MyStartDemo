@@ -7,6 +7,7 @@
 //
 
 #import "ExploreViewController.h"
+#import "MyCell.h"
 
 @interface ExploreViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *myTableView;
@@ -82,14 +83,20 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell* tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"tableviewcell" forIndexPath:indexPath];
-    tableViewCell.textLabel.text = [NSString stringWithFormat:@"%@ %ld",@"text",(long)indexPath.row];
-    tableViewCell.imageView.image = [UIImage imageNamed:@"baomu"];
-    
-//    tableViewCell.layer.shouldRasterize = YES;
-//    tableViewCell.layer.rasterizationScale = [UIScreen mainScreen].scale;
+//    UITableViewCell* tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"tableviewcell" forIndexPath:indexPath];
+//    tableViewCell.textLabel.text = [NSString stringWithFormat:@"%@ %ld",@"text",(long)indexPath.row];
+//    tableViewCell.imageView.image = [UIImage imageNamed:@"baomu"];
 
-    return tableViewCell;
+    
+    //    tableViewCell.layer.shouldRasterize = YES;
+    //    tableViewCell.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    
+//    return tableViewCell;
+    
+    MyCell* mycell = [MyCell cellWithTableView:tableView];
+    [mycell setCell:[NSString stringWithFormat:@"%@ %ld",@"text",(long)indexPath.row]];
+    
+    return mycell;
 }
 
 @end
